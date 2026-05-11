@@ -1,0 +1,129 @@
+body{
+    background-color: #faf0ca;
+}
+
+/* Barra de accesos */
+
+.topbar_about_me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #fff3b0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 50%;
+    margin: 0 auto;
+    border: 5px solid #8b8c89;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 25px 25px 25px 25px;
+    padding-bottom: 10px;
+}
+.topbar_inline{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.topbar_menu_item{
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: #b8c0ff;
+    
+}
+
+
+/* Inicio de Clases del question.html*/
+/*
+.michael_image{
+    float: left;
+   display: flex;
+   
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    width: 422px;
+    height: 312px;
+    object-fit: cover;
+}
+.jim_image{
+    display: flex;
+    flex-direction: column;
+   margin-right: 300px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 10px;
+   width: 422px;
+   height: 312px;
+   object-fit: cover;
+}
+*/
+
+.question_container {
+    display: flex;
+    justify-content: center; /* Centra los dos bloques en la pantalla */
+    gap: 50px;              /* Espacio entre Dwight y Jim */
+    margin-top: 20px;
+}
+
+/* Estilo para los enlaces <a> */
+.question_container a {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen arriba y el texto abajo */
+    align-items: center;    /* Centra el texto respecto a la imagen */
+    text-decoration: none;  /* Quita el subrayado del link */
+    color: inherit;
+}
+
+/* Ajuste de las imágenes (sacamos los floats y márgenes manuales) */
+.michael_image, .jim_image {
+    width: 422px;
+    height: 312px;
+    object-fit: cover;
+    margin-bottom: 10px; /* Espacio entre el GIF y el texto de abajo */
+}
+
+/* Estilo opcional para el texto "Hoy es jueves" */
+.question_container p {
+    margin: 0;
+    background-color: #8d775f;
+    color: #ffc300;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Fin de Clases del question.html*/
+
+
+
+
+.game_lobby_title_container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.game_lobby_title_text{
+    background-color: #8d775f;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.game_lobby_description{
+    background-color: #8d775f;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffc300;
+}
+    
+
+

@@ -1,0 +1,12 @@
+display difrerencias/similitudes y como se comporta
+elementos html h1,p, audio, de cada elemento que tipo de display tiene por defecto
+css tipos de sleectores, jerasrquias estyilo en liena cual tiene mas jerarquia que ptra
+atributos html, mas importantes de cada elemento (a= href, img= source, audio y video)
+css que formas hay de dar estilos a una pagina(h1 centrado width, flex alignn)
+rutas: ../
+box sizing diferencia entre border box y content box suma o no suma los bordes
+tabla, lista estructura basica
+menu de navegacion horizontal
+margin y padding diferencias
+text align vs margin 0 atributos
+tipografias: principales propiedades font weight,family,size, font u,b,i

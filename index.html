@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 100px;
+            margin-top: 100px;
+            margin-bottom: 20px
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header ul li {
+            display: inline;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        nav li {
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            padding: 10px 200px;
+            background-color: rgb(132, 255, 0);
+            border-radius: 20px;
+        } 
+
+        #video-fondo {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="ludwig.png" alt="">
+        <h1>Título</h1>
+        <h2>Subtítulo</h2>
+        <ul class="redes">
+            <li>Link 1</li>
+            <li>Link 1</li>
+        </ul>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/Identikit/index_final.html">Identikit</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </nav>
+
+    <video id="video-fondo" autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+</body>
+
+</html>
