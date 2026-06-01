@@ -1,5 +1,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+/* Primera seccion: Barra de navegacion */
         * {
                 margin: 0;
                 padding: 0;
@@ -56,8 +58,7 @@
                 align-items: center;
                 gap: 10px;
         } 
-
-
+/* Segunda seccion  */
         .image_container {
                 background-image: url(./assets/perrito.jpg);
                 background-size: cover;
@@ -135,3 +136,93 @@
         .btn-adopcion:hover {
                 background: #d98d00;
         }
+
+   /* --- CONTENEDOR GENERAL --- */
+.cards_container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Espacio vertical entre una tarjeta y otra */
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- TARJETA BASE (Imagen Izquierda, Texto Derecha) --- */
+.card-banner {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Mayor separación para que la foto quede bien a la izquierda */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+/* 🔥 EL TRUCO: Si la tarjeta es par (2, 4, 6...), invierte el orden */
+.card-banner:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* --- IMAGEN --- */
+.card-image-container {
+    flex: 0 0 450px; /* Ajusta este número si querés la foto más grande o más chica */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* --- CONTENIDO DE TEXTO --- */
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-title {
+    color: #f39200;
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #555555;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* --- BOTÓN --- */
+.card-button {
+    align-self: flex-start;
+    background-color: #f39200;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.card-button:hover {
+    background-color: #d67f00;
+}
+
+/* --- RESPONSIVE (Celulares) --- */
+@media (max-width: 768px) {
+    .card-banner, 
+    .card-banner:nth-child(even) {
+        flex-direction: column; /* En la versión móvil, todas vuelven a ordenarse hacia abajo */
+        gap: 20px;
+    }
+    
+    .card-image-container {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
