@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Patitas Limpias</title>
+    <!-- Mantenemos FontAwesome solo para los iconos de las cajas y la hamburguesa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="topbar_menu">
+        <nav class="topbar_list">
+            <img src="./assets/logo.png" alt="Logo ONG" class="logo-img">
+            
+            <!-- Boton de tres lineas para el celular -->
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-list" id="nav-list">
+                <li><button class="nav-link active" data-tab="inicio">Inicio</button></li>
+                <li><button class="nav-link" data-tab="nosotros">Acerca de</button></li>
+                <li><button class="nav-link" data-tab="que-hacemos">¿Qué hacemos?</button></li>
+                <li><button class="nav-link" data-tab="contacto">Contacto</button></li>
+                <li><button class="nav-link btn-donar" data-tab="donar">Donar</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. SECCION: INICIO -->
+        <section id="inicio" class="tab-content active">
+            <div class="image_container">
+                <div class="text_container">
+                    <h1 class="main_text">Refugio Patitas Limpias</h1>
+                    <h5>Bienvenido al Refugio Patitas Limpias <br> donde encontramos un hogar para los perritos sin dueño.</h5>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h2>Conocé nuestro trabajo diario</h2>
+            </div>
+
+            <div class="cards_container">
+                <!-- Tarjeta 1: Rocky -->
+                <div class="card-banner">
+                    <div class="card-image-container">
+                        <img src="../assets/IMG_2326.jpg" alt="Rocky" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Adoptá a Rocky y cambiá dos vidas</h2>
+                        <p class="card-text">
+                            Adoptar es más que sumar un perro a tu hogar: es abrirle la puerta a una nueva vida llena de <strong>amor, cuidados y segundas oportunidades</strong>. Conocé la historia de Rocky, un corazón enorme esperando ser parte de una familia.
+                        </p>
+                        <p class="card-subtext">
+                            Cuando elegís adoptar, también estás liberando un lugar para que otro perro pueda ser rescatado.
+                        </p>
+                        <button class="card-button" onclick="irAContacto()">Enterate cómo</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Veni a visitarnos (Estilo El Campito) -->
+                <div class="card-banner">
+                    <div class="card-image-container">
+                        <img src="./assets/card_1.jpg" alt="Vení a visitarnos" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">¡Vení a conocer a los perritos!</h2>
+                        <p class="card-text">
+                            No hay nada más lindo para los chicos del refugio que recibir visitas. Organizamos jornadas abiertas para que puedas venir a pasearlos, llenarlos de mimos, traer donaciones o simplemente pasar una tarde distinta rodeado de colitas felices.
+                        </p>
+                        <p class="card-subtext">
+                            Formar parte de sus sábados es una de las maneras más lindas de ayudar mientras esperan su hogar definitivo.
+                        </p>
+                        <button class="card-button" onclick="irAContacto()">¿Cómo venir?</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SECCION: ACERCA DE -->
+        <section id="nosotros" class="tab-content">
+            <div class="about-container">
+                <h2>Acerca de Nosotros</h2>
+                <p class="subtitle-text">Conocé la historia y el corazón de Patitas Limpias.</p>
+                
+                <p class="about-description">
+                    Somos un grupo de voluntarios que amamos a los animales. Nos encargamos de rescatar a perritos que están sufriendo en la calle, curarlos, darles de comer bien y buscarles una familia responsable que los cuide para toda la vida.
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-box">
+                        <h3><i class="fa-solid fa-bullseye"></i> Misión</h3>
+                        <p>Rescatar y rehabilitar animales callejeros, fomentando la adopción responsable y concientizando a la sociedad sobre el cuidado de las mascotas.</p>
+                    </div>
+                    <div class="about-box">
+                        <h3><i class="fa-solid fa-eye"></i> Visión</h3>
+                        <p>Lograr un futuro donde no haya más animales abandonados en las calles y cada perrito tenga una familia que lo trate con el respeto que se merece.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCION: ¿QUÉ HACEMOS? (FORMATO BLOG) -->
+        <section id="que-hacemos" class="tab-content">
+            <div class="blog-container">
+                <h2>Nuestros Proyectos Activos</h2>
+                <p class="subtitle-text">Te contamos en qué andamos trabajando semana a semana.</p>
+                
+                <div class="blog-grid">
+                    <!-- Post 1 -->
+                    <div class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=400" alt="Castraciones" class="blog-img">
+                        <div class="blog-content">
+                            <span class="blog-tag">Salud</span>
+                            <h3>Campañas de Castración Masiva</h3>
+                            <p>Salimos a recorrer barrios vulnerables para realizar jornadas de castración gratuitas y evitar que sigan naciendo cachorritos en la calle.</p>
+                        </div>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=400" alt="Educación" class="blog-img">
+                        <div class="blog-content">
+                            <span class="blog-tag">Educación</span>
+                            <h3>Charlas en Escuelas</h3>
+                            <p>Creemos que la solución de fondo es educar. Damos talleres interactivos para los más chicos sobre cómo cuidar bien a sus mascotas.</p>
+                        </div>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="blog-post">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400" alt="Obras" class="blog-img">
+                        <div class="blog-content">
+                            <span class="blog-tag">Obras</span>
+                            <h3>Nuevos Caniles de Aislamiento</h3>
+                            <p>Estamos construyendo un sector especial techado para poder recibir a los cachorros enfermos sin poner en riesgo la salud de los demás.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCION: CONTACTO -->
+        <section id="contacto" class="tab-content">
+            <div class="contact-wrapper">
+                <h2>Ponete en contacto</h2>
+                <p class="subtitle-text">Escribinos si querés adoptar, ser voluntario o venir a visitarnos.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Motivo de contacto</label>
+                        <select id="motivo">
+                            <option value="Adopcion">Quiero Adoptar</option>
+                            <option value="Visita">Quiero ir a las visitas de los Sábados</option>
+                            <option value="Voluntario">Quiero ser Voluntario</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea id="message" rows="4" required placeholder="Escribinos acá..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 5. SECCION: LANDING DONAR / SUBSCRIPCIÓN -->
+        <section id="donar" class="tab-content">
+            <div class="donate-container">
+                <h2>Tu ayuda salva vidas</h2>
+                <p class="subtitle-text">Todo lo recaudado se destina a alimento balanceado y veterinarias.</p>
+                
+                <div class="donation-cards">
+                    <div class="donate-card">
+                        <h4>Alimento Mensual</h4>
+                        <p class="price">$5.000 / mes</p>
+                        <p>Asegura la bolsa de comida de un perrito durante todo el mes.</p>
+                        <button class="donate-btn" onclick="donarPlan('Alimento Mensual')">Suscribirme</button>
+                    </div>
+                    <div class="donate-card featured">
+                        <div class="badge">Urgente</div>
+                        <h4>Atención Médica</h4>
+                        <p class="price">$12.000 / mes</p>
+                        <p>Cubre las vacunas, medicamentos y visitas veterinarias de urgencia.</p>
+                        <button class="donate-btn" onclick="donarPlan('Atención Médica')">Suscribirme</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Refugio Patitas Limpias. Trabajo Práctico Nro. 2 - UADE.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
