@@ -1,0 +1,48 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav ul {
+            display: flex;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            /* Propiedades de Estilo Visual */
+            background-color: violet;
+            width: 100vw;
+            height: 48px;
+            gap: 12px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            background-color: green;
+            list-style: none;
+            height: 48px;
+            padding: 0 32px;
+        }
+
+        button {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 20;
+        }
+
+        .flexNav {
+            flex-direction: column;
+            align-items: stretch;
+            height: auto;
+            gap: 8px;
+        }
+
+        main {
+            margin-top: 48px;
+        }

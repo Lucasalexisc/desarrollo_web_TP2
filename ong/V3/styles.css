@@ -99,6 +99,15 @@ body {
     margin-bottom: 30px;
 }
 
+.saturday_image {
+    margin: 40px auto;
+    padding: 30px 170px;
+    border-radius: 15px;
+    height: 430px;
+    object-fit: cover;  
+
+}
+
 /* --- SECCION INICIO --- */
 .image_container {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/perrito.jpg);

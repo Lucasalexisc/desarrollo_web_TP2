@@ -1,28 +1,34 @@
-// Variable del menu para abrirlo en celulares
+// Variable del menu para abrirlo en celulares (se mantiene igual)
 var menuToggle = document.getElementById('mobile-menu');
 var navList = document.getElementById('nav-list');
 
 if (menuToggle && navList) {
     menuToggle.addEventListener('click', function() {
-        navList.classList.toggle('open');
+        navList.toggle('open');
     });
 }
 
-// Lógica de SPA (Cambio entre pestañas sin recargar la página)
-var navButtons = document.querySelectorAll('.nav-link');
+// NUEVA LÓGICA SPA: Ahora busca CUALQUIER elemento con data-tab en todo el sitio
+// Esto incluye los botones del menú, los "Leer más" del blog y los "Volver"
+var spaButtons = document.querySelectorAll('[data-tab]');
 var tabSections = document.querySelectorAll('.tab-content');
 
-navButtons.forEach(function(button) {
+spaButtons.forEach(function(button) {
     button.addEventListener('click', function() {
         var targetTab = button.getAttribute('data-tab');
 
-        // Sacar clase activa a todos los botones y ponérsela al que clickeamos
-        navButtons.forEach(function(btn) {
+        // 1. Manejo del menú de arriba:
+        // Buscamos si el botón que tocamos es parte del menú principal
+        var menuButtons = document.querySelectorAll('.nav-link');
+        menuButtons.forEach(function(btn) {
             btn.classList.remove('active');
+            // Si el data-tab del botón del menú coincide con la sección actual, lo pintamos de verde
+            if (btn.getAttribute('data-tab') === targetTab) {
+                btn.classList.add('active');
+            }
         });
-        button.classList.add('active');
 
-        // Ocultar todas las secciones y mostrar solo la que coincide con el ID
+        // 2. Cambio de sección: Ocultamos todas y mostramos la elegida
         tabSections.forEach(function(section) {
             section.classList.remove('active');
             if (section.id === targetTab) {
@@ -30,16 +36,15 @@ navButtons.forEach(function(button) {
             }
         });
 
-        // Si el menú del celular está abierto, lo cerramos al hacer click
+        // 3. Si estamos en el celu y el menú estaba abierto, lo cerramos
         if (navList.classList.contains('open')) {
             navList.classList.remove('open');
         }
 
-        // Subir al inicio de la página automáticamente
+        // 4. Subir al inicio de la página automáticamente con un efecto suave
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
-
 // Función para el formulario de contacto
 var formulario = document.getElementById('contactForm');
 if (formulario) {
