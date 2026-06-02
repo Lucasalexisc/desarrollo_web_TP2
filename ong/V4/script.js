@@ -1,25 +1,37 @@
-/* Funcion de Carrousel ** IMPORTANTE PARA EL PARCIAL ** */
-let imagenes = document.querySelectorAll('.slides img');
-let posicion = 0;
+/*Menu desplegable*/ 
+
+function abrirMenu() {
+    let flexNav = document.querySelector('ul')
+    flexNav.classList.toggle('flexNav')
+}
+
+/*Carrousel*/ 
+
+let imagenes = document.querySelectorAll('img')
+
+let posicion = 0
 
 function activarImagen(posicion) {
-    // 2. Usamos 'slide-active' para no romper la navbar
-    imagenes.forEach((img) => img.classList.remove('slide-active'));
-    imagenes[posicion].classList.add('slide-active');
+    imagenes.forEach((img) => img.classList.remove('active'))
+    imagenes[posicion].classList.add('active')
 }
 
 function siguiente() {
-    posicion = posicion + 1;
+    posicion = posicion + 1
+
     if (posicion >= imagenes.length) {
-        posicion = 0;
+        posicion = 0
     }
-    activarImagen(posicion);
+
+    activarImagen(posicion)
 }
 
 function anterior() {
-    posicion = posicion - 1;
+    posicion = posicion - 1
+
     if (posicion < 0) {
-        posicion = imagenes.length - 1;
+        posicion = imagenes.length - 1
     }
-    activarImagen(posicion);
+
+    activarImagen(posicion)
 }
