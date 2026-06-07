@@ -44,7 +44,7 @@
         }
 
         .abrir_menu {
-            position: absolute;
+            position: absolute; 
             top: 16px;
             right: 16px;
             z-index: 20;
@@ -179,13 +179,13 @@ div.gallery-item div.desc {
 /* 1. Modificamos el contenedor base para preparar la animación */
 .container_image {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hace que la transición de agrandado sea suave */
-    overflow: hidden; /* CRUCIAL: Evita que la imagen se salga de los bordes de la card al agrandarse */
-    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    overflow: hidden; /* La imagen no sale de la Card */
+    cursor: pointer; /* Cambia el cursor*/
 }
 
-/* 2. Cuando pasamos el cursor sobre la CARD, esta se agranda un 4% y gana sombra */
+/* 2. Al pasar el cursor sobre la card */
 .container_image:hover {
-    transform: scale(1.04); /* Agranda la tarjeta un poquito */
+    transform: scale(1.04); /* Agranda la tarjeta*/
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Le da profundidad simulando que se "eleva" */
 }
 
