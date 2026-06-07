@@ -146,8 +146,9 @@ div.gallery-item div.desc {
   padding: 15px;
   text-align: center;
 } */
+/* ----------------------------------- */
 
-
+/* CARDS DE PERRITOS */
 
 .container_image{
     width: 260px;
@@ -172,6 +173,55 @@ div.gallery-item div.desc {
     object-fit: cover;
     
 }
+
+/* --- EFECTO HOVER PARA LAS CARDS DE LOS PERRITOS --- */
+
+/* 1. Modificamos el contenedor base para preparar la animación */
+.container_image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hace que la transición de agrandado sea suave */
+    overflow: hidden; /* CRUCIAL: Evita que la imagen se salga de los bordes de la card al agrandarse */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+}
+
+/* 2. Cuando pasamos el cursor sobre la CARD, esta se agranda un 4% y gana sombra */
+.container_image:hover {
+    transform: scale(1.04); /* Agranda la tarjeta un poquito */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Le da profundidad simulando que se "eleva" */
+}
+
+/* 3. Preparamos la imagen dentro de la card para su propia animación */
+.container_image .perritos {
+    transition: transform 0.3s ease; /* Transición suave para la imagen */
+}
+
+/* 4. Cuando pasamos el cursor sobre la CARD, la IMAGEN interna también hace zoom */
+.container_image:hover .perritos {
+    transform: scale(1.06); /* Hace un ligero zoom a la foto del perrito */
+}
+
+
+/* ------------------------ */
+
+/* Por defecto, la segunda foto está oculta */
+.container_image .perritos_foto-hover {
+    display: none;
+}
+
+/* Cuando pasamos el cursor por la CARD, ocultamos la primera foto... */
+.container_image:hover .perritos {
+
+    display: none;
+}
+
+/* ... y mostramos la segunda foto */
+.container_image:hover .perritos_foto-hover {
+    display: block;
+    height: 306px;
+    width: 100%;
+}
+
+
+
 
 /* Seccion formulario */
 

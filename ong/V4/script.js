@@ -1,12 +1,4 @@
-/*Menu desplegable*/ 
-
-function abrirMenu() {
-    let flexNav = document.querySelector('ul')
-    flexNav.classList.toggle('flexNav')
-}
-
-/*Carrousel*/ 
-
+/* Funcion de Carrousel ** IMPORTANTE PARA EL PARCIAL ** */
 let imagenes = document.querySelectorAll('img')
 
 let posicion = 0
