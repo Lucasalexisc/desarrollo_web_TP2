@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+
+        <nav>
+            <ul class="navbar">
+                <div style="display: flex; flex-direction: row;">
+                    <img src="../assets/perro (2).png" alt="" class="logo">
+                    <h2 style="font-family: 'Fredoka', sans-serif;">Refugio <br>Patitas Limpias</h2>
+                </div>
+
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./about.html" class="link">Nosotros</a></li>
+                <li><a href="./projects.html" class="link">Proyectos</a></li>
+                <li><a href="./contact.html" class="link">Contacto</a></li>
+                <button class="abrir_menu" onclick="abrirMenu()">X</button>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Carrousel -->
+
+        <section class="galeria">
+
+            <div class="slides">
+
+                <img src="../assets/perrito.jpg" alt="" class="active">
+                <img src="img/img2.webp" alt="">
+                <img src="img/img3.jpg" alt="">
+
+            </div>
+
+            <button id="botonAnt" onclick="anterior()"> ◀️ </button>
+            <button id="botonSig" onclick="siguiente()"> ▶️ </button>
+
+
+        </section>
+
+
+        <section>
+
+            <div
+                style="display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+                <h2 style="padding: 20px; background-color: aqua; border-radius: 10px; ">Conocé a nuestros perritos</h2>
+            </div>
+
+
+            <!-- Galeria -->
+            <div class="gallery">
+
+                <div class="container_image">
+                    <img src="../assets/IMG_2326.jpg" alt="Rocky" class="perritos">
+                    <h3 class="name_title_card">Rocky</h3>
+                    <p class="job_title_card">¡Pura energía y diversión! Rocky es el compañero ideal para familias
+                        activas o personas que disfrutan del deporte al aire libre. Le encanta correr, jugar a buscar la
+                        pelota y aprender trucos nuevos.</p>
+                </div>
+
+                <div class="container_image">
+                    <img src="../assets/anchito.jpg" alt="Anchito" class="perritos">
+                    <h3 class="name_title_card">Anchito</h3>
+                    <p class="job_title_card">¡Un compañero fiel y juguetón! Anchito es un perrito muy cariñoso que ama
+                        los juegos y el afecto de su familia.
+                    </p>
+                </div>
+
+                <div class="container_image">
+                    <img src="../assets/beagle.jpg" alt="Simon" class="perritos">
+                    <h3 class="name_title_card">Simon</h3>
+                    <p class="job_title_card">Un verdadero dulce de leche. Simoncito es un perrito súper compañero y
+                        cariñoso que disfruta de las cosas simples de la vida. Su plan perfecto incluye estar acurrucado
+                        en sus mantitas y recibir mimos </p>
+                </div>
+
+
+                <div class="container_image">
+                    <img src="../assets/cali.jpg" alt="Cali" class="perritos">
+                    <h3 class="name_title_card">Cali</h3>
+                    <p class="job_title_card">Una bebé curiosa y llena de amor. Cali fue rescatada hace poquito y está
+                        lista para conocer lo que es una familia de verdad. Como toda cachorra, es muy juguetona, un
+                        poco torpe y tiene todo por aprender.</p>
+                </div>
+
+
+
+            </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <form>
+                <div class="container_form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido"><br>
+
+                    <label for="email">Dirección de e-mail:</label>
+                    <input type="email" id="email" name="email"><br>
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad"><br>
+
+                    <span>Lenguaje Favorito:</span>
+                    <input type="radio" id="html" value="html" name="lenguaje">
+                    <label for="html">HTML</label>
+                    <input type="radio" id="css" value="css" name="lenguaje">
+                    <label for="css">CSS</label><br>
+
+
+                    <label for="nacionalidad">Seleccione su nacionalidad:</label>
+                    <select id="nacionalidad" name="nacionalidad">
+                        <option value="Argentina">💙 Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Brasil">Brasil</option>
+                    </select> <br>
+
+                    <textarea name="mensaje" style="width:70%; height:50px;"></textarea><br>
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar formulario">
+                </div>
+            </form>
+
+        </section>
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="container_footer">
+            <p>&copy; 2023 Patitas Limpias. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

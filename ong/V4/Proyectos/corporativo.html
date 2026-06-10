@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntariado Corporativo - Patitas Limpias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        .project-list {
+            list-style-position: inside;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .project-list li {
+            background-color: transparent;
+            height: auto;
+            padding: 0;
+            margin-bottom: 12px;
+            display: list-item;
+        }
+
+        .action-container {
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        .btn-action {
+            display: inline-block;
+            background-color: rgb(7, 80, 148);
+            color: white;
+            text-decoration: none;
+            font-family: 'Fredoka', sans-serif;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-action:hover {
+            background-color: #053b6d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="navbar">
+                <img src="../assets/logo.png" alt="Logo" class="logo">
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./about.html" class="link">Nosotros</a></li>
+                <li><a href="./projects.html" class="link">Proyectos</a></li>
+                <li><a href="./contact.html" class="link">Contacto</a></li>
+                <button class="abrir_menu" onclick="abrirMenu()">X</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container_about">
+            <h1 style="padding: 20px; background-color: transparent; border-radius: 10px;">Proyectos Especiales</h1>
+
+            <h2 class="title_about">Voluntariado Corporativo Solidario</h2>
+            <h3 class="subtitle_about">Alianzas que transforman: sumá a tu empresa y equipo a una jornada de impacto
+                real</h3>
+
+            <ul class="text_about project-list">
+                <li><strong>Invitación institucional:</strong> Convocamos a organizaciones, PyMEs y corporaciones a
+                    romper la rutina de la oficina conectando con una causa comunitaria urgente.</li>
+                <li><strong>Dinámica de Team Building:</strong> Ofrecemos jornadas diseñadas a la medida de los equipos
+                    de trabajo para fortalecer sus lazos internos mediante la colaboración solidaria.</li>
+                <li><strong>Experiencia de triple impacto:</strong> Beneficia de forma inmediata la infraestructura
+                    edilicia del refugio, eleva la calidad de vida de los animales y transforma la perspectiva humana de
+                    cada empleado.</li>
+            </ul>
+
+            <h3 class="subtitle_about">Cronograma General de la Jornada (4 Horas)</h3>
+            <ul class="text_about project-list">
+                <li><strong>Bloque 1 - Bienvenida y Recorrido Inicial:</strong> Charla informativa sobre la problemática
+                    del abandono, metodologías diarias de rescate y repaso de las medidas de seguridad colectivas.</li>
+                <li><strong>Bloque 2 - Manos a la Obra (Infraestructura):</strong> Trabajo dividido por cuadrillas para
+                    tareas clave como pintura de caniles, reparaciones edilicias de cercos o acondicionamiento térmico
+                    de zonas de descanso.</li>
+                <li><strong>Bloque 3 - Conexión Canina Directa:</strong> Espacio de recreación activa, juegos
+                    recreativos, paseos guiados y cepillado personalizado de los perritos del refugio junto a los
+                    colaboradores.</li>
+                <li><strong>Cierre y Reflexión Colectiva:</strong> Foto grupal de recuerdo al finalizar las actividades
+                    y entrega formal de un certificado de agradecimiento institucional a la empresa participante.</li>
+            </ul>
+
+            <div class="action-container">
+                <a href="./contact.html" class="btn-action">Ponete en Contacto con Coordinación</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container_footer">
+            <p>&copy; 2023 Patitas Limpias. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
