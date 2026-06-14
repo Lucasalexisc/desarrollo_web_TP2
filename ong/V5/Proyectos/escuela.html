@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas Escolares - Patitas Limpias</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-list {
+            list-style-position: inside;
+            text-align: left;
+            margin: 20px 0;
+        }
+        .project-list li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid var(--primary-light);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../../assets/perro (2).png" alt="Logo" class="logo">
+                    <h2 class="brand-name">Refugio <br>Patitas Limpias</h2>
+                </a>
+
+                <li><a href="../index.html" class="link">Inicio</a></li>
+                <li><a href="../about.html" class="link">Nosotros</a></li>
+                <li><a href="../adopt.html" class="link">Adoptar</a></li>
+                <li><a href="../projects.html" class="link">Proyectos</a></li>
+                <li><a href="../contact.html" class="link">Contacto</a></li>
+                <li><a href="../donate.html" class="link link-donar">Donar</a></li>
+
+                <button class="abrir_menu" onclick="abrirMenu()">☰</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container_about">
+            <h1>Patitas Escolares</h1>
+            
+            <h2 class="title_about">Multiplicando Empatía en las Aulas</h2>
+            <h3 class="subtitle_about">Llevamos la voz de los animales a los colegios</h3>
+            <p class="text_about">
+                El rescate y la adopción son respuestas fundamentales e inmediatas para los animales desprotegidos. Sin embargo, la solución a largo plazo es la educación. Con "Patitas Escolares", nuestro equipo de educadores visita escuelas para concientizar sobre el bienestar animal.
+            </p>
+
+            <h3 class="subtitle_about">Ejes Temáticos de Nuestros Talleres</h3>
+            <ul class="project-list text_about">
+                <li><strong>Tenencia Responsable:</strong> Qué implica incorporar un miembro de cuatro patas a la familia (vacunas, paseos, nutrición y compromiso de por vida).</li>
+                <li><strong>Castración y Superpoblación:</strong> Explicamos de forma sencilla por qué la esterilización es la única herramienta eficaz y humana para frenar el abandono.</li>
+                <li><strong>Prevención del Maltrato:</strong> Ayudamos a los alumnos a reconocer el maltrato animal y a aprender a denunciarlo a través de adultos responsables.</li>
+                <li><strong>Interacción Directa:</strong> Llevamos a alguno de nuestros perritos más sociables y tranquilos para que los niños experimenten el cuidado en vivo.</li>
+            </ul>
+
+            <div class="btn-cta-container" style="margin-top: 40px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="../contact.html" class="btn-cta-highlight" style="background-color: var(--primary); box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);">Solicitar Visita</a>
+                <button class="btn-cta-highlight" onclick="abrirModal()">Apoyar el Programa 🐾</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Responsivo -->
+    <footer>
+        <div class="container_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../../assets/perro (2).png" alt="Logo">
+                    <h3>Refugio Patitas Limpias</h3>
+                </div>
+                <p class="footer-text">&copy; 2026 Patitas Limpias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

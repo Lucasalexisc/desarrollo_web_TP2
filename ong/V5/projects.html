@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Patitas Limpias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="../assets/perro (2).png" alt="Logo" class="logo">
+                    <h2 class="brand-name">Refugio <br>Patitas Limpias</h2>
+                </a>
+
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./about.html" class="link">Nosotros</a></li>
+                <li><a href="./adopt.html" class="link">Adoptar</a></li>
+                <li><a href="./projects.html" class="link">Proyectos</a></li>
+                <li><a href="./contact.html" class="link">Contacto</a></li>
+                <li><a href="./donate.html" class="link link-donar">Donar</a></li>
+
+                <button class="abrir_menu" onclick="abrirMenu()">☰</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-section-wrapper">
+            <h2 class="project-section-title">Nuestros Proyectos</h2>
+            <p class="project-section-desc">
+                En Patitas Limpias, cada proyecto está pensado para transformar vidas y construir un futuro más amable
+                para los animales. Conocé cómo trabajamos con la comunidad, escuelas y empresas.
+            </p>
+
+            <!-- Contenedor Flexbox de Proyectos -->
+            <div class="project-cards-container">
+
+                <!-- Proyecto Sábados -->
+                <article class="project-card-item">
+                    <img src="../assets/perrito_acostado.jpg" alt="Sabados de patitas" class="project-card-img">
+                    <div class="project-card-body">
+                        <h3 class="project-card-name">Sábados de patitas</h3>
+                        <p class="project-card-text">
+                            Los días sábados son una fiesta canina en nuestro refugio. Organizamos jornadas especiales
+                            de paseos grupales, juegos al aire libre y socialización.
+                        </p>
+                        <a href="./Proyectos/sabados.html">Conocé más →</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto Escolares -->
+                <article class="project-card-item">
+                    <img src="../assets/perrito_adopcion1.png" alt="Patitas Escolares" class="project-card-img">
+                    <div class="project-card-body">
+                        <h3 class="project-card-name">Patitas Escolares</h3>
+                        <p class="project-card-text">
+                            Concientización y educación para los más jóvenes. Ofrecemos charlas dinámicas en colegios
+                            sobre tenencia responsable y respeto por los seres sintientes.
+                        </p>
+                        <a href="./Proyectos/escuela.html">Conocé más →</a>
+                    </div>
+                </article>
+
+                <!-- Voluntariado Corporativo -->
+                <article class="project-card-item">
+                    <img src="../assets/pet-adoption.jpg" alt="Voluntariado Corporativo" class="project-card-img">
+                    <div class="project-card-body">
+                        <h3 class="project-card-name">Voluntariado Corporativo</h3>
+                        <p class="project-card-text">
+                            Jornadas de triple impacto para empresas. Los equipos asisten al refugio para colaborar en
+                            tareas edilicias, paseos y acondicionamiento.
+                        </p>
+                        <a href="./Proyectos/corporativo.html">Conocé más →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="btn-cta-container" style="margin-top: 50px;">
+                <button class="btn-cta-highlight" onclick="abrirModal()">Calcular Impacto de Donación 🐾</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Responsivo -->
+    <footer>
+        <div class="container_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/perro (2).png" alt="Logo">
+                    <h3>Refugio Patitas Limpias</h3>
+                </div>
+                <p class="footer-text">&copy; 2026 Patitas Limpias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

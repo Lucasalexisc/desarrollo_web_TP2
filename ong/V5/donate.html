@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar - Patitas Limpias</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .donation-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .option-card {
+            background-color: var(--card-bg);
+            border-top: 4px solid var(--accent);
+            padding: 25px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            flex: 1 1 280px;
+            max-width: 320px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            transition: var(--transition-smooth);
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(217, 70, 239, 0.1);
+        }
+
+        .option-card h4 {
+            color: var(--text-main);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .option-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .bank-details {
+            background-color: rgba(45, 106, 79, 0.05);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-top: 30px;
+            border: 1px dashed var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="../assets/perro (2).png" alt="Logo" class="logo">
+                    <h2 class="brand-name">Refugio <br>Patitas Limpias</h2>
+                </a>
+
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./about.html" class="link">Nosotros</a></li>
+                <li><a href="./adopt.html" class="link">Adoptar</a></li>
+                <li><a href="./projects.html" class="link">Proyectos</a></li>
+                <li><a href="./contact.html" class="link">Contacto</a></li>
+                <li><a href="./donate.html" class="link link-donar">Donar</a></li>
+
+                <button class="abrir_menu" onclick="abrirMenu()">☰</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container_about">
+            <h1>Colaborá con Nosotros</h1>
+
+            <h2 class="title_about">Tu donación hace la diferencia</h2>
+            <p class="text_about">
+                El Refugio Patitas Limpias se sostiene enteramente gracias a la ayuda económica de particulares y
+                colaboradores solidarios. No recibimos subsidios del gobierno, por lo que cada donación, sin importar su
+                tamaño, nos ayuda directamente a cubrir los costos de alimento, atención veterinaria, medicamentos y
+                mantenimiento del predio.
+            </p>
+
+            <!-- Botón de Calculadora de Impacto -->
+            <div class="btn-cta-container" style="margin: 30px 0;">
+                <button class="btn-cta-highlight" onclick="abrirModal()">Calcular Impacto de mi Donación 🐾</button>
+            </div>
+
+            <h3 class="subtitle_about" style="text-align: center; margin-top: 40px;">Formas de Ayudar</h3>
+
+            <div class="donation-options">
+                <div class="option-card">
+                    <h4>🍲 Alimento Diario 🍲</h4>
+                    <p>Con tu aporte mensual, ayudás a asegurar que todos los perritos coman alimento balanceado de
+                        calidad todos los días.</p>
+                </div>
+                <div class="option-card">
+                    <h4>🩺 Insumos Médicos 🩺</h4>
+                    <p>Colaborá con vacunas, desparasitarios, cirugías de emergencia y tratamientos crónicos de nuestros
+                        rescatados mayores.</p>
+                </div>
+                <div class="option-card">
+                    <h4>🛠️ Infraestructura 🛠️</h4>
+                    <p>Colaborá con chapas, cemento, maderas y mantas para acondicionar los caniles y protegerlos del
+                        frío y del calor.</p>
+                </div>
+            </div>
+
+            <div class="bank-details text_about">
+                <h4
+                    style="color: var(--primary-dark); font-family: 'Fredoka', sans-serif; margin-bottom: 10px; text-align: center;">
+                    Datos para Transferencia Bancaria</h4>
+                <p><strong>Titular:</strong> Asociación Civil Patitas Limpias</p>
+                <p><strong>Banco:</strong> Banco de la Nación Argentina</p>
+                <p><strong>CBU:</strong> 0110000000000000000000</p>
+                <p><strong>Alias:</strong> patitas.limpias.ong</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Responsivo -->
+    <footer>
+        <div class="container_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/perro (2).png" alt="Logo">
+                    <h3>Refugio Patitas Limpias</h3>
+                </div>
+                <p class="footer-text">&copy; 2026 Patitas Limpias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

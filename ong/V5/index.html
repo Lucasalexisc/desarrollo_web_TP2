@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Patitas Limpias - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <!-- Brand logo & name -->
+                <a href="./index.html" class="navbar-brand">
+                    <img src="../assets/perro (2).png" alt="Logo" class="logo">
+                    <h2 class="brand-name">Refugio <br>Patitas Limpias</h2>
+                </a>
+
+                <!-- Navigation Links -->
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./about.html" class="link">Nosotros</a></li>
+                <li><a href="./adopt.html" class="link">Adoptar</a></li>
+                <li><a href="./projects.html" class="link">Proyectos</a></li>
+                <li><a href="./contact.html" class="link">Contacto</a></li>
+                <li><a href="./donate.html" class="link link-donar">Donar</a></li>
+
+                <!-- Hamburger menu button -->
+                <button class="abrir_menu" onclick="abrirMenu()">☰</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Carrusel con <picture> para imágenes adaptables (Checklist #5) -->
+        <section class="galeria">
+            <div class="slides">
+                <!-- Slide 1 -->
+                <picture class="active">
+                    <source media="(max-width: 600px)" srcset="../assets/perrito.jpg">
+                    <img src="../assets/perrito.jpg" alt="Adoptar es salvar una vida">
+                </picture>
+                <!-- Slide 2 -->
+                <picture>
+                    <source media="(max-width: 600px)" srcset="../assets/perrito.jpg">
+                    <img src="../assets/adopcion.jpg" alt="Cuidado y Amor a nuestros animales">
+                </picture>
+                <!-- Slide 3 -->
+                <picture>
+                    <source media="(max-width: 600px)" srcset="../assets/perrito.jpg">
+                    <img src="../assets/perrito_adopcion.png" alt="Un compañero para toda la vida">
+                </picture>
+            </div>
+
+            <!-- Controles absolutos del carrusel -->
+            <button id="botonAnt" onclick="anterior()"> ◀️ </button>
+            <button id="botonSig" onclick="siguiente()"> ▶️ </button>
+        </section>
+
+        <!-- Sección de Programas y Áreas de Impacto (Estilo El Campito) -->
+        <section class="section-title-container">
+            <h2 class="section-title">Nuestras Áreas de Impacto</h2>
+            <p style="max-width: 600px; margin: 15px auto 0 auto; color: var(--text-muted); font-size: 1.1rem;">
+                En Patitas Limpias creemos que para cambiar el abandono hay que ir más allá del refugio. Conocé las
+                iniciativas con las que involucramos a la sociedad.
+            </p>
+        </section>
+
+        <section class="programs-grid">
+            <!-- Card 1: Sábados -->
+            <div class="program-card">
+                <span class="program-icon">🐕</span>
+                <h3 class="program-title">Sábados de Patitas</h3>
+                <p class="program-desc">El día más esperado de la semana. Abrimos el refugio para realizar caminatas
+                    grupales, juegos y paseos de socialización con voluntarios.</p>
+                <a href="./Proyectos/sabados.html" class="program-link">Ver más →</a>
+            </div>
+
+            <!-- Card 2: Escuela -->
+            <div class="program-card">
+                <span class="program-icon">🎓</span>
+                <h3 class="program-title">Patitas Escolares</h3>
+                <p class="program-desc">Educación en las aulas. Realizamos charlas y dinámicas interactivas sobre el
+                    cuidado animal y la tenencia responsable en escuelas.</p>
+                <a href="./Proyectos/escuela.html" class="program-link">Ver mas</a>
+            </div>
+
+            <!-- Card 3: Corporativo -->
+            <div class="program-card">
+                <span class="program-icon">🏢</span>
+                <h3 class="program-title">Voluntariado Corporativo</h3>
+                <p class="program-desc">Jornadas solidarias a la medida de tu empresa. Trabajo en equipo para reparar
+                    caniles, cepillar y pasar un día activo con los perritos.</p>
+                <a href="./Proyectos/corporativo.html" class="program-link">Ver mas</a>
+            </div>
+
+            <!-- Card 4: Denunciar -->
+            <div class="program-card">
+                <span class="program-icon">📢</span>
+                <h3 class="program-title">Denunciar Maltrato</h3>
+                <p class="program-desc">No mires hacia otro lado. Conocé el protocolo legal y las herramientas prácticas
+                    para realizar una denuncia formal de abandono o abuso.</p>
+                <a href="./contact.html" class="program-link">Ver mas</a>
+            </div>
+        </section>
+
+        <!-- Banner Promocional de Donaciones (Estilo El Campito) -->
+        <section class="donation-banner">
+            <div class="donation-banner-content">
+                <h2 class="donation-banner-title">Un sueño que podés apoyar hoy mismo</h2>
+                <p class="donation-banner-text">
+                    No recibimos financiamiento gubernamental ni empresarial fijo. Todo lo que hacemos es posible
+                    gracias a donantes comprometidos con darles segundas oportunidades a animales maltratados. Con tu
+                    donación garantizamos platos de comida, atención médica de calidad, vacunas y amor.
+                </p>
+                <button class="btn-cta-highlight" onclick="abrirModal()">¡Colaborá ahora! 🐾</button>
+            </div>
+            <div class="donation-banner-image-container">
+                <img src="../assets/perrito_acostado.jpg" alt="Perrito en el Refugio" class="donation-banner-image">
+            </div>
+        </section>
+
+        <div class="prefooter-container">
+            <img src="../assets/prefooter.png" alt="prefooter" class="prefooter">
+            <div class="prefooter-text-overlay">
+                <h1>Una huella que podés dejar hoy mismo</h1>
+                <p>
+                    Con tu colaboración, <b>todo es posible.</b> Cada colita feliz es el resultado de personas como vos
+                    que
+                    eligen no mirar para otro lado. <b>Juntos</b>, podemos seguir dándoles el <b>amor</b> y el
+                    <b>cuidado</b> que
+                    tanto necesitan.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Responsivo -->
+    <footer>
+        <div class="container_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/perro (2).png" alt="Logo">
+                    <h3>Refugio Patitas Limpias</h3>
+                </div>
+                <p class="footer-text">&copy; 2026 Patitas Limpias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

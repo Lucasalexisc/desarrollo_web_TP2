@@ -175,6 +175,56 @@ div.gallery-item div.desc {
 
         }
 
+        /* Banner de Apoyo y Donación (Estilo El Campito) */
+        .donation-banner {
+            background: linear-gradient(135deg, rgba(82, 183, 136, 0.12) 0%, rgba(45, 106, 79, 0.04) 100%);
+            border: 2px dashed rgba(45, 106, 79, 0.25);
+            border-radius: var(--radius-lg);
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+        }
+
+        .donation-banner-content {
+            flex: 1;
+        }
+
+        .donation-banner-title {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .donation-banner-text {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .donation-banner-image-container {
+            flex: 0 0 240px;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .donation-banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+        }
+
+
+
         /* Seccion formulario */
 
         .container_form {

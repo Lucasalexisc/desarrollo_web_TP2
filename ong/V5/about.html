@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Patitas Limpias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="../assets/perro (2).png" alt="Logo" class="logo">
+                    <h2 class="brand-name">Refugio <br>Patitas Limpias</h2>
+                </a>
+
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./about.html" class="link">Nosotros</a></li>
+                <li><a href="./adopt.html" class="link">Adoptar</a></li>
+                <li><a href="./projects.html" class="link">Proyectos</a></li>
+                <li><a href="./contact.html" class="link">Contacto</a></li>
+                <li><a href="./donate.html" class="link link-donar">Donar</a></li>
+
+                <button class="abrir_menu" onclick="abrirMenu()">☰</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container_about">
+            <h1>Sobre Nosotros</h1>
+
+            <h2 class="title_about">Nuestra Historia: El Camino de Patitas Limpias</h2>
+
+            <h3 class="subtitle_about"><i class="fa-solid fa-dog"></i> El inicio de un sueño sobre cuatro patas <i
+                    class="fa-solid fa-dog"></i></h3>
+            <p class="text_about">Patitas Limpias nació hace más de siete años como una respuesta directa a una realidad
+                que dolía ver todos los días en nuestras calles: el abandono y la desprotección de cientos de animales.
+                Lo que comenzó como el esfuerzo individual de un pequeño grupo de vecinos que rescataban perritos en
+                situaciones límite pronto se transformó en algo mucho más grande.</p>
+
+            <h3 class="subtitle_about">Un refugio que se convirtió en hogar</h3>
+            <p class="text_about">Diseñamos nuestro refugio no como un lugar de paso frío, sino como un verdadero hogar
+                de transición. En Patitas Limpias, cada rincón está pensado para que los perritos rescatados dejen atrás
+                los traumas del maltrato. Acá reciben atención veterinaria integral, castraciones y, por sobre todas las
+                cosas, el amor y la socialización que necesitan para volver a confiar en los humanos.</p>
+
+            <h3 class="subtitle_about">Nuestra misión hoy y hacia el futuro</h3>
+            <p class="text_about">Nuestra labor no termina cuando un perrito se recupera; nuestro objetivo final es el
+                momento de la adopción responsable. Trabajamos minuciosamente para conectar a cada uno de nuestros
+                rescatados con el hogar ideal para su perfil, garantizando que esa segunda oportunidad que la vida les
+                da sea para siempre.</p>
+
+            <!-- Sección de Valores con Flexbox (Checklist #3) -->
+            <h3 class="subtitle_about" style="text-align: center; margin-top: 40px; font-size: 1.6rem;">Nuestros Pilares
+            </h3>
+            <div class="valores-grid">
+                <div class="valor-card">
+                    <h4>❤️ Amor ❤️</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Cada animal recibe cariño incondicional y
+                        atención personalizada mientras busca su hogar definitivo.</p>
+                </div>
+                <div class="valor-card">
+                    <h4>🩺 Cuidado 🩺</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Atención veterinaria, vacunas y castración
+                        garantizadas para asegurar su bienestar físico.</p>
+                </div>
+                <div class="valor-card">
+                    <h4>🏡 Hogar 🏡</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Fomentamos la adopción responsable y
+                        realizamos seguimiento para asegurar un futuro seguro.</p>
+                </div>
+            </div>
+
+            <div class="btn-cta-container" style="margin-top: 40px;">
+                <button class="btn-cta-highlight" onclick="abrirModal()">🐾 Calcular Impacto de Donación 🐾</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Responsivo -->
+    <footer>
+        <div class="container_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/perro (2).png" alt="Logo">
+                    <h3>Refugio Patitas Limpias</h3>
+                </div>
+                <p class="footer-text">&copy; 2026 Patitas Limpias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

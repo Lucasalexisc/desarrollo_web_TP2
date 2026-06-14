@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntariado Corporativo - Patitas Limpias</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-list {
+            list-style-position: inside;
+            text-align: left;
+            margin: 20px 0;
+        }
+        .project-list li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid var(--primary-light);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../../assets/perro (2).png" alt="Logo" class="logo">
+                    <h2 class="brand-name">Refugio <br>Patitas Limpias</h2>
+                </a>
+
+                <li><a href="../index.html" class="link">Inicio</a></li>
+                <li><a href="../about.html" class="link">Nosotros</a></li>
+                <li><a href="../adopt.html" class="link">Adoptar</a></li>
+                <li><a href="../projects.html" class="link">Proyectos</a></li>
+                <li><a href="../contact.html" class="link">Contacto</a></li>
+                <li><a href="../donate.html" class="link link-donar">Donar</a></li>
+
+                <button class="abrir_menu" onclick="abrirMenu()">☰</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container_about">
+            <h1>Voluntariado Corporativo</h1>
+            
+            <h2 class="title_about">Alianzas Solidarias de Alto Impacto</h2>
+            <h3 class="subtitle_about">Sumá a tu empresa a una jornada transformadora</h3>
+            <p class="text_about">
+                Abrimos las puertas del refugio a corporaciones y equipos que deseen salir de la oficina y conectarse con una labor solidaria. Diseñamos dinámicas de team building centradas en el cuidado animal y la colaboración activa en el refugio.
+            </p>
+
+            <h3 class="subtitle_about">Cronograma de la Jornada (4 Horas)</h3>
+            <ul class="project-list text_about">
+                <li><strong>Bienvenida y Recorrido:</strong> Charla informativa sobre el refugio, medidas de seguridad y cómo interactuar de forma segura con los animales.</li>
+                <li><strong>Tareas de Infraestructura:</strong> Trabajo en equipo para reparar cercos, acondicionar caniles, pintar sectores comunes y plantar árboles.</li>
+                <li><strong>Paseo Recreativo:</strong> Cada participante se vincula con un perrito para una sesión de caminata, cepillado y juegos al aire libre.</li>
+                <li><strong>Cierre y Agradecimiento:</strong> Entrega de certificados institucionales a la empresa y foto grupal para recordar la jornada.</li>
+            </ul>
+
+            <div class="btn-cta-container" style="margin-top: 40px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="../contact.html" class="btn-cta-highlight" style="background-color: var(--primary); box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);">Coordinar Jornada</a>
+                <button class="btn-cta-highlight" onclick="abrirModal()">Donar al Refugio 🐾</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Responsivo -->
+    <footer>
+        <div class="container_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../../assets/perro (2).png" alt="Logo">
+                    <h3>Refugio Patitas Limpias</h3>
+                </div>
+                <p class="footer-text">&copy; 2026 Patitas Limpias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Patitas Limpias</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .contact-info {
+            flex: 1 1 300px;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-form-container {
+            flex: 2 1 500px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="../assets/perro (2).png" alt="Logo" class="logo">
+                    <h2 class="brand-name">Refugio <br>Patitas Limpias</h2>
+                </a>
+
+                <li><a href="./index.html" class="link">Inicio</a></li>
+                <li><a href="./about.html" class="link">Nosotros</a></li>
+                <li><a href="./adopt.html" class="link">Adoptar</a></li>
+                <li><a href="./projects.html" class="link">Proyectos</a></li>
+                <li><a href="./contact.html" class="link">Contacto</a></li>
+                <li><a href="./donate.html" class="link link-donar">Donar</a></li>
+
+                <button class="abrir_menu" onclick="abrirMenu()">☰</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section-title-container">
+            <h2 class="section-title">Ponete en Contacto</h2>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Información de Contacto -->
+            <div class="contact-info">
+                <h3 style="color: var(--primary-dark); font-size: 1.8rem; margin-bottom: 25px;">Datos del Refugio</h3>
+
+                <div class="info-item">
+                    <h4>📍 Dirección 📍</h4>
+                    <p>Av. Cabildo 1234, Buenos Aires, Argentina</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>📞 Teléfono 📞</h4>
+                    <p>+54 11 4567-8901</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>✉️ Correo Electrónico ✉️</h4>
+                    <p>contacto@patitaslimpias.org</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>⏰ Horario de Visita ⏰</h4>
+                    <p>Sábados de 10:00 AM a 2:00 PM (Con inscripción previa)</p>
+                </div>
+            </div>
+
+            <!-- Formulario de Contacto (Checklist #8, #9) -->
+            <div class="contact-form-container">
+                <form class="container_form" style="margin: 0; width: 100%;"
+                    onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito!');">
+                    <h3
+                        style="font-family: 'Fredoka', sans-serif; text-align: center; margin-bottom: 20px; color: var(--primary);">
+                        Envianos un Mensaje</h3>
+
+                    <label for="c_nombre">Nombre:</label>
+                    <input type="text" id="c_nombre" name="nombre" required>
+
+                    <label for="c_apellido">Apellido:</label>
+                    <input type="text" id="c_apellido" name="apellido" required>
+
+                    <label for="c_email">Dirección de e-mail:</label>
+                    <input type="email" id="c_email" name="email" required>
+
+                    <label for="c_edad">Edad:</label>
+                    <input type="number" id="c_edad" name="edad" min="1" required>
+
+                    <label for="c_motivo">Motivo de la consulta:</label>
+                    <select id="c_motivo" name="motivo" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="adopcion">Adopción de Mascotas</option>
+                        <option value="voluntariado">Voluntariado Sabatino</option>
+                        <option value="colegio">Visita Escolar (Patitas Escolares)</option>
+                        <option value="empresa">Jornada Corporativa</option>
+                        <option value="consulta">Consulta General</option>
+                    </select>
+
+                    <label for="c_mensaje">Mensaje:</label>
+                    <textarea id="c_mensaje" name="mensaje" rows="4" placeholder="Escribí tu consulta aquí..."
+                        required></textarea>
+
+                    <div class="form-buttons">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpiar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Responsivo -->
+    <footer>
+        <div class="container_footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../assets/perro (2).png" alt="Logo">
+                    <h3>Refugio Patitas Limpias</h3>
+                </div>
+                <p class="footer-text">&copy; 2026 Patitas Limpias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
