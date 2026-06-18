@@ -1,7 +1,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
 
-/* Variables de Diseño */
+/* Colores de la pagina */
 :root {
     --primary: #2d6a4f;
     /* Verde bosque principal */
@@ -103,7 +103,7 @@ nav {
     display: block;
 }
 
-/* Para no romper el HTML del alumno que usa li dentro del ul.navbar y links de clase .link */
+
 .navbar a.link {
     color: var(--text-main);
     text-decoration: none;
@@ -115,12 +115,13 @@ nav {
     transition: var(--transition-smooth);
 }
 
+/* Cuando paso el mouse por un link del navbar, se difumina un poco el fondo */
 .navbar a.link:hover {
     color: var(--primary);
     background-color: rgba(82, 183, 136, 0.1);
 }
 
-/* Botón especial de Donar en el Menú */
+/* boton de donar distinto a los otros */
 .navbar a.link-donar {
     background-color: var(--accent);
     color: white !important;
@@ -133,7 +134,7 @@ nav {
     transform: translateY(-2px);
 }
 
-/* Botón Hamburguesa de Menú */
+/* estilos de abrir menu */
 .abrir_menu {
     display: none;
     background-color: var(--primary);
@@ -190,7 +191,7 @@ main {
     object-position: center;
 }
 
-/* Botones del Carrusel */
+/* Botones del carrousel */
 .galeria button {
     position: absolute;
     top: 50%;
@@ -223,7 +224,7 @@ main {
     right: 20px;
 }
 
-/* Sección de Bienvenida / Título */
+/* primera seccion*/
 .section-title-container {
     text-align: center;
     padding: 50px 20px 20px;
@@ -239,7 +240,7 @@ main {
     border-left: 5px solid var(--primary);
 }
 
-/* Galería de Mascotas / Grid */
+/* Galería de perritos*/
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -329,7 +330,7 @@ main {
     background-color: var(--primary-dark);
 }
 
-/* Secciones Informativas y Acerca de */
+/* acerca de */
 .container_about {
     max-width: 800px;
     margin: 40px auto;
@@ -368,7 +369,7 @@ main {
     text-align: justify;
 }
 
-/* Grilla de Valores (Nosotros) */
+/* nosotros */
 .valores-grid {
     display: flex;
     flex-wrap: wrap;
@@ -391,7 +392,7 @@ main {
     margin-bottom: 8px;
 }
 
-/* Secciones de Proyectos */
+/* Proyectos */
 .project-section-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -480,7 +481,7 @@ main {
     transform: translateX(4px);
 }
 
-/* Formularios */
+/* formularios */
 .container_form {
     max-width: 600px;
     margin: 40px auto;
@@ -547,7 +548,7 @@ main {
     cursor: pointer;
 }
 
-/* Botones del Formulario */
+/* Botones del formulario */
 .form-buttons {
     display: flex;
     gap: 15px;
@@ -589,7 +590,7 @@ main {
     background-color: rgba(209, 213, 219, 0.9);
 }
 
-/* Botones de Acción / CTAs */
+/* botones de acción */
 .btn-cta-container {
     text-align: center;
     margin-top: 30px;
@@ -617,7 +618,7 @@ main {
     box-shadow: 0 10px 24px rgba(217, 70, 239, 0.4);
 }
 
-/* Footer responsivo */
+/* Footer */
 .container_footer {
     width: 100%;
     background-color: var(--primary-dark);
@@ -659,7 +660,7 @@ main {
     color: #e2e8f0;
 }
 
-/* Modal Style de Calculadora de Impacto */
+/* calculadora de impacto */
 .modalStyle {
     background-color: white;
     width: 90%;
@@ -756,7 +757,7 @@ main {
     background-color: rgba(209, 213, 219, 0.9);
 }
 
-/* Backdrop para el modal */
+/* fondo oscuro del modal */
 .modal-overlay {
     position: fixed;
     top: 0;

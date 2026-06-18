@@ -1,7 +1,5 @@
 # Guía de Estudio y Defensa de Examen: Proyecto Refugio Patitas Limpias
 
-Esta guía está diseñada para que puedas defender con éxito el proyecto de la ONG en tu examen parcial o final. Aquí se detalla la teoría y la práctica de cada punto de la lista de verificación (checklist) requerida por la cátedra, mostrando exactamente dónde y cómo se implementó en tu código de la carpeta **`V5`**.
-
 ---
 
 ## 📌 1. Posicionamiento CSS: Static, Relative y Absolute

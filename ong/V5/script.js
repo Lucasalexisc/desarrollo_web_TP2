@@ -1,4 +1,4 @@
-/* Menu desplegable responsive */
+/* Menu desplegable: importante para el parcial */
 function abrirMenu() {
     let flexNav = document.querySelector('ul.navbar');
     if (flexNav) {
@@ -6,8 +6,8 @@ function abrirMenu() {
     }
 }
 
-/* Carrousel corregido */
-// Seleccionamos únicamente las imágenes o pictures dentro del contenedor del carrousel
+/* Carrousel  */
+// Modifico el codigo de la clase que seleccionaba las imagenes por fuera del .slide porque tomaba todas las img
 let imagenes = document.querySelectorAll('.slides picture, .slides > img');
 let posicion = 0;
 
@@ -35,12 +35,12 @@ function anterior() {
     activarImagen(posicion);
 }
 
-// Iniciar carrousel
+// Iniciar carrousel -> parcial
 if (imagenes.length > 0) {
     activarImagen(posicion);
 }
 
-/* Modal y Calculadora de Impacto */
+/* modal y calculadora de impacto */
 function abrirModal() {
     // 1. fondo difuminado
     let overlay = document.createElement("div");
@@ -88,7 +88,7 @@ function abrirModal() {
         let precioKitAlimento = 5000;
         let cantidadKits = (monto / precioKitAlimento).toFixed(1);
 
-        // Sin decimales
+        // bvorro decimales
         if (cantidadKits.endsWith('.0')) {
             cantidadKits = Math.floor(monto / precioKitAlimento);
         }
@@ -98,13 +98,13 @@ function abrirModal() {
         botonHacerDonacion.style.display = "block";
     }
 
-    // 8. Event Listener para Calcular
+    // 8. Event listener para calcular
     botonCalcular.addEventListener("click", function () {
         let monto = parseFloat(inputMonto.value);
         calcularImpacto(monto);
     });
 
-    // 9. Funciones para Cerrar modal
+    // 9. cerrar modal
     function cerrarModal() {
         modal.remove();
         overlay.remove();
@@ -113,7 +113,7 @@ function abrirModal() {
     botonCerrar.addEventListener("click", cerrarModal);
     overlay.addEventListener("click", cerrarModal);
 
-    // 10. Confirmación de Donación
+    // 10. Confirmación 
     botonHacerDonacion.addEventListener("click", function () {
         modal.innerHTML = `<h1>¡Gracias por tu donación!</h1>
                             <p style="color: var(--primary); background: transparent; border: none; padding: 10px; font-weight: bold;">
