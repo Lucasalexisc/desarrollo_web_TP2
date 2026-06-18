@@ -633,3 +633,134 @@ formularioCalc.addEventListener("submit", function(event) {
   `;
 });
 ```
+
+---
+
+## 11. Guía Oficial de Métodos y Propiedades JavaScript (UADE)
+
+Esta sección explica detalladamente y de forma sencilla qué hace cada uno de los métodos y propiedades oficiales utilizados en la materia de Desarrollo Web.
+
+---
+
+### 🔍 Selección de Elementos en el DOM
+
+#### 1. `document.getElementById("id")`
+*   **¿Qué hace?** Busca en el HTML el **único** elemento que tenga exactamente el `id` indicado (ej. `id="mi-boton"`) y lo devuelve.
+*   **Ejemplo:**
+    ```javascript
+    const boton = document.getElementById("btn-enviar");
+    ```
+
+#### 2. `document.querySelector("selector_css")`
+*   **¿Qué hace?** Busca el **primer** elemento de la página que coincida con el selector CSS especificado. Sirve para seleccionar por clase (`.clase`), por ID (`#id`) o por etiqueta (`h1`, `div`, `nav a`). Es más genérico y moderno que `getElementById`.
+*   **Ejemplo:**
+    ```javascript
+    const primerEnlace = document.querySelector(".nav-links a"); // Trae el primer enlace dentro de la barra de navegación
+    const boton = document.querySelector("#btn-enviar"); // Equivale a getElementById
+    ```
+
+#### 3. `document.querySelectorAll("selector_css")`
+*   **¿Qué hace?** Busca **todos** los elementos en la página que coincidan con el selector CSS y los devuelve agrupados en una lista (llamada *NodeList*, que se comporta casi igual que un Array).
+*   **Ejemplo:**
+    ```javascript
+    const todosLosEnlaces = document.querySelectorAll(".nav-links a"); 
+    // Ahora 'todosLosEnlaces' es una lista con todos los elementos que cumplen la condición.
+    ```
+
+---
+
+### 🔄 Manipulación de Clases CSS (`classList`)
+
+#### 4. `elemento.classList.add("nombre-clase")`
+*   **¿Qué hace?** Le añade una clase de CSS al elemento especificado. Esto se usa para cambiar su apariencia dinámicamente inyectándole estilos que ya declaraste en tu CSS (como `.activo`, `.visible`, `.error`).
+*   **Ejemplo:**
+    ```javascript
+    tarjeta.classList.add("borde-rojo"); // Le agrega la clase 'borde-rojo' a la tarjeta
+    ```
+
+#### 5. `elemento.classList.remove("nombre-clase")`
+*   **¿Qué hace?** Quita la clase CSS indicada del elemento. Si el elemento no tiene la clase, no hace nada.
+*   **Ejemplo:**
+    ```javascript
+    tarjeta.classList.remove("borde-rojo"); // Quita la clase y vuelve a su estado normal
+    ```
+
+#### 6. `elemento.classList.toggle("nombre-clase")`
+*   **¿Qué hace?** Funciona como un interruptor de luz. Si el elemento **ya tiene** esa clase, se la remueve; si **no la tiene**, se la agrega. Es ideal para abrir/cerrar menús colapsables o cambiar entre modo oscuro y claro.
+*   **Ejemplo:**
+    ```javascript
+    menu.classList.toggle("active"); // Si está abierto lo cierra, si está cerrado lo abre
+    ```
+
+---
+
+### 👂 Escuchadores de Eventos
+
+#### 7. `elemento.addEventListener("evento", funcion)`
+*   **¿Qué hace?** Queda "escuchando" a que ocurra una acción del usuario en ese elemento (como un `"click"`, `"submit"` de formulario, o `"keydown"` de teclado) para ejecutar la función asociada inmediatamente.
+*   **Ejemplo:**
+    ```javascript
+    boton.addEventListener("click", function() {
+      alert("¡Clic hecho!");
+    });
+    ```
+
+---
+
+### 🏗️ Creación, Inserción y Eliminación de Elementos
+
+#### 8. `document.createElement("etiqueta")`
+*   **¿Qué hace?** Crea un nuevo elemento HTML en la memoria de JavaScript (todavía no se muestra en la pantalla). Tienes que indicarle qué etiqueta quieres crear (ej. `"p"`, `"div"`, `"li"`, `"img"`).
+*   **Ejemplo:**
+    ```javascript
+    const nuevoParrafo = document.createElement("p"); // Crea un elemento <p> vacío en memoria
+    nuevoParrafo.innerHTML = "Hola, soy nuevo!";
+    ```
+
+#### 9. `document.body.appendChild(elemento)` / `padre.appendChild(elemento)`
+*   **¿Qué hace?** Inserta el elemento que creaste (en el paso anterior) dentro de otro elemento en la página. `appendChild` lo mete al final, como el "último hijo".
+    *   `document.body.appendChild(parrafo)` lo mete al final de todo el body.
+    *   `contenedor.appendChild(parrafo)` lo mete adentro de ese contenedor específico.
+*   **Ejemplo:**
+    ```javascript
+    const contenedor = document.getElementById("contenedor-mensajes");
+    contenedor.appendChild(nuevoParrafo); // Ahora el párrafo aparece físicamente en la web
+    ```
+
+#### 10. `elemento.remove()`
+*   **¿Qué hace?** Elimina por completo ese elemento HTML de la página web.
+*   **Ejemplo:**
+    ```javascript
+    const anuncio = document.getElementById("anuncio-publicitario");
+    anuncio.remove(); // Desaparece físicamente del HTML de la pantalla
+    ```
+
+---
+
+### 📝 Modificación de Contenido y Propiedades
+
+#### 11. `elemento.innerHTML`
+*   **¿Qué hace?** Es una propiedad que representa el contenido HTML que hay dentro de una etiqueta. Si le asignas un valor con el signo `=`, sobrescribe todo su contenido. Puedes usarlo para insertar texto simple o texto con etiquetas HTML.
+*   **Ejemplo:**
+    ```javascript
+    caja.innerHTML = "<strong>Texto en negrita</strong>";
+    ```
+
+---
+
+### 🔁 Bucles y Recorridos de Listas
+
+#### 12. `lista.forEach(funcion)`
+*   **¿Qué hace?** Sirve para recorrer (iterar) uno por uno todos los elementos de un array o de una lista obtenida con `querySelectorAll()`. Ejecuta la función que le pases para cada uno de los elementos.
+*   **Ejemplo:**
+    Supongamos que queremos pintar de rojo todos los enlaces de la página:
+    ```javascript
+    const todosLosEnlaces = document.querySelectorAll("a");
+
+    // Para cada 'enlace' de la lista de enlaces, agregale la clase 'rojo'
+    todosLosEnlaces.forEach(function(enlace) {
+      enlace.classList.add("rojo");
+    });
+    ```
+
+
